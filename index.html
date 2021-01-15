@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=UTF-8>
+  <meta name=viewport content=width=device-width, initial-scale=1,maximum-scale=1>
+  <!-- minify -->
+  <link href=https://fonts.googleapis.com/css?family=Press+Start+2P rel=stylesheet>
+  <link href=https://unpkg.com/nes.css/css/nes.css rel=stylesheet />
+  <style type=text/css media=all>
+    .textc {
+      text-align: center;
+    }
+
+    .container {
+      margin: 6px;
+      overflow: hidden;
+    }
+
+    .mb {
+      margin: 20px
+    }
+
+    .mbt {
+      margin-bottom: 20px;
+    }
+
+    .mbs {
+      margin-bottom: 30px;
+    }
+
+    .yellow-bg {
+      background-color: #3B46FF;
+    }
+
+    .green-tx,
+    h2 {
+      color: #FFEB00;
+    }
+
+    .red {
+      color: #91FF00
+    }
+  </style>
+  <title></title>
+</head>
+
+<body class=yellow-bg>
+  <div class=container>
+    <p id=hero></p>
+    <section class=mbs id=part1>
+      <h2 class=mb id=title></h2>
+      <div class=nes-container with-title >
+        <p class=title nes-badge>
+          <span class=is-warning>python</span>
+        </p>
+        <div class=textc>
+          <button type=button class=nes-btn is-primary> Django</button>
+          <button type=button class=nes-btn is-success>GUI</button>
+          <button class=nes-btn is-error type=button>pygame</button>
+        </div>
+      </div>
+    </section>
+    <section class=mbs id=part2>
+      <div class=nes-container with-title>
+        <p class=title nes-badge>
+          <span class=is-success>JavaScript</span>
+        </p>
+        <div class=textc>
+          <button type=button class=nes-btn is-primary> Django</button>
+          <button type=button class=nes-btn is-success>GUI</button>
+          <button class=nes-btn is-error type=button>pygame</button>
+        </div>
+      </div>
+    </section>
+    <section class=mbs id=part2>
+      <div class=nes-container with-title>
+        <p class=title nes-badge>
+          <span class=is-primary>JavaScript</span>
+        </p>
+        <div class=textc>
+          <button type=button class=nes-btn is-primary> Django</button>
+          <button type=button class=nes-btn is-success>GUI</button>
+          <button class=nes-btn is-error type=button>pygame</button>
+        </div>
+      </div>
+    </section>
+    <section class=mbs id=part2>
+      <div class=nes-container with-title>
+        <p class=title nes-badge>
+          <span class=is-error>JavaScript</span>
+        </p>
+        <div class=textc>
+          <button type=button class=nes-btn is-primary> Django</button>
+          <button type=button class=nes-btn is-success>GUI</button>
+          <button class=nes-btn is-error type=button>pygame</button>
+        </div>
+      </div>
+    </section>
+    <section class=textc>
+      <h4 class=red mbt id=cntinfo></h4>
+      <section class=icon-list>
+        <i class=nes-icon twitter is-medium></i>
+        <i class=nes-icon facebook is-medium></i>
+        <i class=nes-icon github is-medium></i>
+        <i class=nes-icon gmail is-medium></i>
+      </section>
+    </section>
+  </div>
+  <script src=https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js></script>
+  <script type=text/javascript charset=utf-8>
+    new TypeIt(#title, {
+      strings: My project ,
+      speed: 100,
+      loop: false
+    }).go();
+    new TypeIt(#cntinfo, {
+      strings: contact info ,
+      speed: 100,
+      loop: true
+    }).go();
+  </script>
+</body>
+
+</html>
