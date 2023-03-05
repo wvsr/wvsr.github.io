@@ -5,7 +5,7 @@ function About() {
   return (
     <section className='about' data-aos='fade-right' id='about'>
       <div className='container lg:mx-auto px-4 md:px-6 m-auto max-w-screen-lg py-24'>
-        <h2 className='text-2xl lg:text-3xl uppercase font-bold text-center font-medium my-8 text-gray-700'>
+        <h2 className='text-2xl lg:text-3xl uppercase font-bold text-center my-8 text-gray-700'>
           About Me
         </h2>
         <div className='max-w-7xl mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3'>
