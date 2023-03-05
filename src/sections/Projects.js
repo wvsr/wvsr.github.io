@@ -8,6 +8,11 @@ import { AiOutlineLink } from 'react-icons/ai'
 
 const projects = [
   {
+    title: 'eccomerce website',
+    url: 'https://github.com/wvsr/mern-ecommerce-website',
+    img: Shop,
+  },
+  {
     title: 'crypto website',
     url: 'https://cryptobysami.netlify.app/',
     img: CoinBase,
@@ -16,11 +21,6 @@ const projects = [
     title: 'trending movie website',
     url: 'http://moviebysami.netlify.com/',
     img: MovieBase,
-  },
-  {
-    title: 'eccomerce website',
-    url: 'https://github.com/wvsr/mern-ecommerce-website',
-    img: Shop,
   },
   { title: 'fahad hossain', url: 'https://fahad-sir.netlify.app/', img: Fahad },
 ]
@@ -54,7 +54,7 @@ function Projects() {
   return (
     <section className='project' id='project'>
       <div className='container lg:mx-auto px-3 md:px-6 m-auto max-w-screen-lg'>
-        <h2 className='text-2xl lg:text-3xl uppercase text-center font-medium my-8 text-gray-700 font-bold'>
+        <h2 className='text-2xl lg:text-3xl uppercase text-center my-8 text-gray-700 font-bold'>
           Projects
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
