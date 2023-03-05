@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 function Hero() {
   return (
@@ -16,7 +17,9 @@ function Hero() {
 
         <div className='py-6 space-x-6'>
           <button className='btn-primary text-lg'>Get Resume</button>
-          <button className='btn-secondary'>About me</button>
+          <Link href='' className='btn-secondary'>
+            Hire me
+          </Link>
         </div>
       </div>
     </section>
