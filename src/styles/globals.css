@@ -4,14 +4,30 @@
 
 body {
   /* overflow-x: hidden; */
+  scroll-behavior: smooth;
 }
+@keyframes menuSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-menu-slide-in {
+  animation: menuSlideIn 0.3s ease forwards;
+}
+
 .hero {
-  background: url('../../public/hero-background.svg');
+  background: url('../../public/images/background/hero-background.svg');
   background-position: top right;
   background-repeat: no-repeat;
 }
 .about {
-  background: url('../../public/about-background.svg');
+  background: url('../../public/images/background/about-background.svg');
   background-position: top left;
   background-repeat: no-repeat;
   /* background-size: cover; */
@@ -27,7 +43,7 @@ body {
   @apply text-lg text-primary font-bold hover:text-purple-400;
 }
 .project {
-  background: url('../../public/project-background.svg');
+  background: url('../../public/images/background/project-background.svg');
   background-position: top left;
   background-repeat: no-repeat;
 }
