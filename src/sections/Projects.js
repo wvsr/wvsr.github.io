@@ -54,7 +54,7 @@ function Projects() {
   return (
     <section className='project' id='project'>
       <div className='container lg:mx-auto px-3 md:px-6 m-auto max-w-screen-lg'>
-        <h2 className='text-2xl lg:text-3xl uppercase text-center font-medium my-8 text-gray-700'>
+        <h2 className='text-2xl lg:text-3xl uppercase text-center font-medium my-8 text-gray-700 font-bold'>
           Projects
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>

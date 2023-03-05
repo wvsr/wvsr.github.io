@@ -2,23 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
-  /* overflow-x: hidden; */
   scroll-behavior: smooth;
-}
-@keyframes menuSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  font-family: 'Poppins', sans-serif;
 }
 
-.animate-menu-slide-in {
-  animation: menuSlideIn 0.3s ease forwards;
+.btn-primary {
+  @apply bg-primary font-medium px-4 py-2 text-white rounded-md hover:scale-95 transition-transform duration-200 hover:opacity-90;
+}
+.btn-success {
+  @apply bg-success font-medium px-4 py-2 text-white rounded-md hover:scale-95 transition-transform duration-200 hover:opacity-90;
+}
+
+.btn-secondary {
+  @apply text-lg text-primary font-bold hover:text-purple-400;
 }
 
 .hero {
@@ -32,18 +30,23 @@ body {
   background-repeat: no-repeat;
   /* background-size: cover; */
 }
-.btn-primary {
-  @apply bg-primary font-medium px-4 py-2 text-white rounded-md hover:scale-95 transition-transform duration-200 hover:opacity-90;
-}
-.btn-success {
-  @apply bg-success font-medium px-4 py-2 text-white rounded-md hover:scale-95 transition-transform duration-200 hover:opacity-90;
-}
-
-.btn-secondary {
-  @apply text-lg text-primary font-bold hover:text-purple-400;
-}
 .project {
   background: url('../../public/images/background/project-background.svg');
   background-position: top left;
   background-repeat: no-repeat;
+}
+
+.animate-menu-slide-in {
+  animation: menuSlideIn 0.3s ease forwards;
+}
+
+@keyframes menuSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
