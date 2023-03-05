@@ -59,7 +59,9 @@ function Projects() {
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
           {projects.map((project) => {
-            return <ImageBox img={project.img} url={project.url} />
+            return (
+              <ImageBox img={project.img} url={project.url} key={project.url} />
+            )
           })}
         </div>
       </div>

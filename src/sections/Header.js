@@ -42,7 +42,7 @@ function Header() {
         <nav className='hidden md:block space-x-6'>
           {menuLinks.map((item) => {
             return (
-              <Link href={item.url}>
+              <Link href={item.url} key={item.url}>
                 <span className='text-gray-500 hover:text-gray-700'>
                   {item.text}
                 </span>
@@ -68,7 +68,7 @@ function Header() {
           <nav className='flex flex-col items-center space-y-4 py-4 bg-white shadow-lg w-full'>
             {menuLinks.map((item) => {
               return (
-                <Link href={item.url} onClick={toggleMenu}>
+                <Link href={item.url} onClick={toggleMenu} key={item.url}>
                   <span className='text-gray-500 hover:text-gray-700'>
                     {item.text}
                   </span>
