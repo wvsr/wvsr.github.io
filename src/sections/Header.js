@@ -37,7 +37,7 @@ function Header() {
   return (
     <Headroom>
       <header className='flex justify-between items-center py-2.5 px-6 bg-[#fffffff3] shadow-md z-50'>
-        <h1 className='text-xl select-none font-bold'>sami.</h1>
+        <h1 className='text-xl select-none font-bold text-gray-700'>sami.</h1>
 
         <nav className='hidden md:block space-x-6'>
           {menuLinks.map((item) => {
