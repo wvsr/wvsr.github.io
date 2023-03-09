@@ -75,9 +75,14 @@ function Header() {
                 </Link>
               )
             })}
-            <Link href='#' class='btn-success'>
-              <span>Hire me</span>
-            </Link>
+            <a
+              href='https://www.fiverr.com/wasimulvari'
+              className='btn-success'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Hire me
+            </a>
           </nav>
         </div>
       )}
