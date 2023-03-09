@@ -16,7 +16,14 @@ function Hero() {
         </p>
 
         <div className='py-6 space-x-6'>
-          <button className='btn-primary text-lg'>Get Resume</button>
+          <a
+            href='https://github.com/wvsr/wvsr.github.io/raw/main/public/resume.pdf'
+            className='btn-primary text-lg'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Get Resume
+          </a>
           <a
             href='https://www.fiverr.com/wasimulvari'
             className='btn-secondary'
