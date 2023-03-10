@@ -49,9 +49,14 @@ function Header() {
               </Link>
             )
           })}
-          <Link href=''>
-            <span className='btn-success'>Hire me</span>
-          </Link>
+          <a
+            href='https://www.fiverr.com/wasimulvari'
+            className='btn-success'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Hire me
+          </a>
         </nav>
 
         <div className='md:hidden'>
