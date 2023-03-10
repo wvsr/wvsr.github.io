@@ -3,6 +3,8 @@ import CoinBase from '../../public/images/projects/coinbase.png'
 import Fahad from '../../public/images/projects/fahad.png'
 import MovieBase from '../../public/images/projects/moviebase.png'
 import Shop from '../../public/images/projects/shop.png'
+import OldPortfolio from '../../public/images/projects/old_portfolio.png'
+import socialMedia from '../../public/images/projects/social_media.png'
 import Image from 'next/image'
 import { AiOutlineLink } from 'react-icons/ai'
 
@@ -23,6 +25,16 @@ const projects = [
     img: MovieBase,
   },
   { title: 'fahad hossain', url: 'https://fahad-sir.netlify.app/', img: Fahad },
+  {
+    title: 'old portfolio',
+    url: 'https://wasimulsami.netlify.app/',
+    img: OldPortfolio,
+  },
+  {
+    title: 'express social media api',
+    url: 'https://github.com/wvsr/mernstack-socialmedia',
+    img: socialMedia,
+  },
 ]
 
 function Projects() {
