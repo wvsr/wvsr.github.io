@@ -34,6 +34,11 @@ body {
   background-position: top left;
   background-repeat: no-repeat;
 }
+.services {
+  background: url('../../public/images/background/hero-background.svg');
+  background-position: top left;
+  background-repeat: no-repeat;
+}
 
 .animate-menu-slide-in {
   animation: menuSlideIn 0.3s ease forwards;
