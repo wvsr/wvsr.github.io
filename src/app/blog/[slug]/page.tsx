@@ -15,3 +15,10 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
     </div>
   )
 }
+
+// Add generateStaticParams
+export function generateStaticParams() {
+  return blogs.map((blog) => ({
+    slug: slugify(blog.title), // Make sure the slug is generated from the blog title
+  }))
+}

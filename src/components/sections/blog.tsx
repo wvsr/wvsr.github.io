@@ -11,7 +11,7 @@ function Blog() {
         {blogs.map((blog) => {
           const slug = 'blog/' + slugify(blog.title)
           return (
-            <div className="space-y-2" id={slug}>
+            <div className="space-y-2" key={slug}>
               <p className="text-sm">{blog.date}</p>
               <Link href={slug}>
                 <h2 className=" w-fit border-black text-xl hover:border-b-[3px] hover:border-dashed">
