@@ -1,5 +1,5 @@
 import Links from '@/components/links'
-
+import Blog from '@/components/sections/blog'
 export default function Home() {
   return (
     <div className="font-base">
@@ -40,6 +40,8 @@ export default function Home() {
       </div>
 
       <Links />
+
+      <Blog />
     </div>
   )
 }
