@@ -14,20 +14,16 @@ export default function Links() {
     },
     {
       icon: SiGithub,
-      href: 'https://github.com/johndoe',
+      href: 'https://github.com/wvsr',
     },
     {
       icon: SiLinkedin,
-      href: 'https://www.linkedin.com/in/johndoe/',
-    },
-    {
-      icon: SiMedium,
-      href: 'https://medium.com/@johndoe',
+      href: 'https://linkedin.com/in/wasimul-vari-sami',
     },
   ]
 
   return (
-    <div className="mr-auto mt-20 flex w-full flex-wrap items-center gap-10">
+    <div className="mr-auto mt-10 flex w-full flex-wrap items-center gap-5">
       {links.map((link, id) => {
         return (
           <a target="_blank" key={id} href={link.href}>

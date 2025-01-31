@@ -10,12 +10,12 @@ export default function Work() {
         {PROJECTS.map((project, id) => {
           return (
             <div
-              className="border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-main p-4 sm:p-5"
+              className="rounded-base border-2 border-border bg-main p-4 shadow-light dark:border-darkBorder dark:shadow-dark sm:p-5"
               key={id}
             >
               <AspectRatio
-                className="border-border dark:border-darkBorder shadow-light dark:shadow-dark !-bottom-[2px] rounded-base border-2"
-                ratio={71 / 26}
+                className="!-bottom-[2px] rounded-base border-2 border-border shadow-light dark:border-darkBorder dark:shadow-dark"
+                ratio={48.5 / 26}
               >
                 <img
                   className="w-full rounded-base"
@@ -24,28 +24,32 @@ export default function Work() {
                 />
               </AspectRatio>
 
-              <div className="text-text mt-5 font-base">
+              <div className="mt-5 font-base text-text">
                 <h2 className="text-xl font-heading sm:text-2xl">
                   {project.name}
                 </h2>
 
                 <p className="mt-2">{project.description}</p>
 
-                <div className="mt-8 grid grid-cols-2 gap-5">
-                  <a
-                    className="border-border dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
-                    href={project.liveLink}
-                    target="_blank"
-                  >
-                    Visit
-                  </a>
-                  <a
-                    className="border-border dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
-                    href={project.repoUrl}
-                    target="_blank"
-                  >
-                    Github
-                  </a>
+                <div className="mt-10 grid grid-cols-2 gap-5">
+                  {project.liveLink && (
+                    <a
+                      className="cursor-pointer rounded-base border-2 border-border bg-white px-4 py-2 text-center text-sm font-base shadow-light transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText dark:shadow-dark dark:hover:shadow-none sm:text-base"
+                      href={project.liveLink}
+                      target="_blank"
+                    >
+                      Visit
+                    </a>
+                  )}
+                  {project.repoUrl && (
+                    <a
+                      className="cursor-pointer rounded-base border-2 border-border bg-white px-4 py-2 text-center text-sm font-base shadow-light transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none dark:border-darkBorder dark:bg-secondaryBlack dark:text-darkText dark:shadow-dark dark:hover:shadow-none sm:text-base"
+                      href={project.repoUrl}
+                      target="_blank"
+                    >
+                      Github
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
