@@ -1,9 +1,12 @@
 import Alive from '@/components/blogs/alive.mdx'
+import { MDXProps } from 'mdx/types'
 
-const blogs = [
-  { title: 'Why Im alive?', date: '2 JAN, 2025', texts: Alive },
-  { title: 'Why Im alive?', date: '2 JAN, 2025', texts: Alive },
-  { title: 'Why Im alive?', date: '2 JAN, 2025', texts: Alive },
-]
+type Blog = {
+  title: string
+  date: string
+  texts: (props: MDXProps) => JSX.Element
+}[]
+
+const blogs: Blog = []
 
 export { blogs }
