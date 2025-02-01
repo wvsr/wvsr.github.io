@@ -10,7 +10,7 @@ export default function Links() {
   const links: { icon: IconType; href: string }[] = [
     {
       icon: SiGmail,
-      href: 'mailto:johndoe@gmail.com',
+      href: 'mailto:barisamiw@gmail.com',
     },
     {
       icon: SiGithub,
