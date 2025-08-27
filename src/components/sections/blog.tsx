@@ -1,11 +1,12 @@
 import React from 'react'
-import { blogs } from '@/data/blogs'
+import { getSortedPostsData } from '@/lib/blogs'
 import Link from 'next/link'
 import { slugify } from '@/lib/utils'
 
 function Blog() {
+  const blogs = getSortedPostsData().slice(0, 3)
   return (
-    <div className="pb-5 pt-14">
+    <section>
       {blogs.length !== 0 && (
         <>
           <h1 className="mb-8 text-xl font-heading sm:text-2xl">Blog Posts</h1>
@@ -26,7 +27,7 @@ function Blog() {
           </article>
         </>
       )}
-    </div>
+    </section>
   )
 }
 
