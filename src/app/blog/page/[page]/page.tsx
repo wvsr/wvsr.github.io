@@ -30,12 +30,12 @@ export default function BlogPage({ params }: { params: { page: string } }) {
               className="block"
               key={id}
             >
-              <div className="mt-5 font-base text-text">
+              <div className="mt-5 font-base text-text dark:text-darkText">
                 <h2 className="text-xl font-heading sm:text-2xl">
                   {blog.title}
                 </h2>
 
-                <p className="mt-2 text-sm text-gray-500">{formatRelativeDate(blog.date)}</p>
+                <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">{formatRelativeDate(blog.date)}</p>
                 <p className="mt-2 text-base">{blog.contentSnippet}</p>
               </div>
             </Link>

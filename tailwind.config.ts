@@ -24,14 +24,14 @@ const config: Config = {
         darkBg: '#272933',
         darkText: '#eeefe9',
         darkBorder: '#000',
-        secondaryBlack: '#212121', // opposite of plain white, not used pitch black because borders and box-shadows are that color
+        secondaryBlack: '#212121',
       },
       borderRadius: {
         base: '5px',
       },
       boxShadow: {
         light: '4px 4px 0px 0px #000',
-        dark: '4px 4px 0px 0px #000',
+        dark: '4px 4px 0px 0px #CCCCCC',
       },
       translate: {
         boxShadowX: '4px',
