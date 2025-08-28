@@ -21,7 +21,7 @@ export default function Nav() {
   ]
 
   return (
-    <div className="mb-10 w-full">
+    <div className="mb-10 w-full flex justify-between items-center">
       <nav className="flex w-max gap-5 rounded-base border-2 border-border bg-main p-1.5 px-4 text-sm font-base text-text shadow-light dark:border-darkBorder dark:shadow-dark sm:text-base">
         {links.map((link) => {
           return (
@@ -43,6 +43,7 @@ export default function Nav() {
           )
         })}
       </nav>
+      <ThemeSwitcher />
     </div>
   )
 }
