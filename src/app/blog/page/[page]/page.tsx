@@ -22,7 +22,7 @@ export default function BlogPage({ params }: { params: { page: string } }) {
       <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Blog</h1>
 
       <div className="flex flex-col gap-5">
-        {paginatedPosts.map((blog, id) => {
+        {paginatedPosts.map((blog: any, id) => {
           const slug = slugify(blog.title)
           return (
             <Link
@@ -30,6 +30,13 @@ export default function BlogPage({ params }: { params: { page: string } }) {
               className="block"
               key={id}
             >
+              {blog.thumbnail && (
+                <img
+                  src={blog.thumbnail}
+                  alt={blog.title}
+                  className="w-full mb-4"
+                />
+              )}
               <div className="mt-5 font-base text-text dark:text-darkText">
                 <h2 className="text-xl font-heading sm:text-2xl">
                   {blog.title}

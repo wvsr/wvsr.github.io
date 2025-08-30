@@ -9,8 +9,33 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: 'Not Found',
     }
   }
+
+  const siteUrl = 'https://wvsr.github.io'
+
   return {
     title: postData.title,
+    description: postData.contentSnippet,
+    openGraph: {
+      title: postData.title,
+      description: postData.contentSnippet,
+      url: `${siteUrl}/blog/${params.slug}`,
+      images: [
+        {
+          url: `${siteUrl}/preview.png`,
+          width: 1200,
+          height: 630,
+          alt: postData.title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: postData.title,
+      description: postData.contentSnippet,
+      images: [`${siteUrl}/preview.png`],
+    },
   }
 }
 
@@ -28,6 +53,13 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
   return (
     <article className="prose dark:prose-invert">
+      {postData.thumbnail && (
+        <img
+          src={postData.thumbnail}
+          alt={postData.title}
+          className="w-full"
+        />
+      )}
       <h1>{postData.title}</h1>
       <div>{postData.date}</div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
