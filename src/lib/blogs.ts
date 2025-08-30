@@ -1,3 +1,5 @@
+'server-only'
+
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -7,7 +9,12 @@ import { slugify } from '@/lib/utils'
 
 const postsDirectory = path.join(process.cwd(), 'src', 'components', 'blogs')
 
+let cachedPosts: any[] | null = null
+
 export function getSortedPostsData() {
+  if (cachedPosts) {
+    return cachedPosts
+  }
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
@@ -30,13 +37,14 @@ export function getSortedPostsData() {
     }
   })
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
+  cachedPosts = allPostsData.sort((a, b) => {
     if (a.date < b.date) {
       return 1
     } else {
       return -1
     }
   })
+  return cachedPosts
 }
 
 export function getAllPostIds() {
