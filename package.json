@@ -19,7 +19,6 @@
     "@fontsource/archivo": "^5.0.20",
     "@icons-pack/react-simple-icons": "^9.4.1",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
-    "@radix-ui/react-tooltip": "^1.0.7",
     "@tailwindcss/typography": "^0.5.16",
     "astro": "^4.11.3",
     "class-variance-authority": "^0.7.0",
