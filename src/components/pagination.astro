@@ -9,7 +9,7 @@ const { currentPage, numPages, base } = Astro.props;
 
 const isFirst = currentPage === 1;
 const isLast = currentPage === numPages;
-const prevPage = `${base}/page/${currentPage - 1}`;
+const prevPage = currentPage - 1 === 1 ? base : `${base}/page/${currentPage - 1}`;
 const nextPage = `${base}/page/${currentPage + 1}`;
 
 ---
@@ -23,7 +23,7 @@ const nextPage = `${base}/page/${currentPage + 1}`;
     )}
     {Array.from({ length: numPages }, (_, i) => (
       <a
-        href={`${base}/page/${i + 1}`}
+        href={i + 1 === 1 ? base : `${base}/page/${i + 1}`}
         class:list={[
           { "font-bold": currentPage === i + 1 }
         ]}

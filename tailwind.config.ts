@@ -6,6 +6,9 @@ const config: Config = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Archivo', 'sans-serif'],
+      },
       colors: {
         main: '#C4A1FF',
         mainAccent: '#fc7303', // not needed for shadcn components

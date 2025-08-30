@@ -15,7 +15,7 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title}>
-  <article class="prose dark:prose-invert">
+  <article class="prose dark:prose-invert max-w-full">
     {post.data.thumbnail && (
       <img
         src={post.data.thumbnail}

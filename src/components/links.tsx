@@ -3,7 +3,6 @@ import {
   SiGithub,
   SiGmail,
   SiLinkedin,
-  SiMedium,
 } from '@icons-pack/react-simple-icons'
 
 export default function Links() {
@@ -23,23 +22,13 @@ export default function Links() {
       href: 'https://linkedin.com/in/wasimul-vari-sami',
       name: 'Linkedin',
     },
-    {
-      icon: SiMedium,
-      href: '#', // Placeholder link
-      name: 'Medium',
-    }
   ]
 
   return (
     <div className="mr-auto flex w-full flex-wrap items-center gap-5">
       {links.map((link, id) => {
         return (
-          <a
-            target="_blank"
-            key={id}
-            href={link.href}
-            aria-label={link.name}
-          >
+          <a target="_blank" key={id} href={link.href} aria-label={link.name}>
             <link.icon className="h-6 w-6" />
           </a>
         )
