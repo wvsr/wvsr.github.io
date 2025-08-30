@@ -1,26 +1,26 @@
-import React from 'react'
-import { getSortedPostsData } from '@/lib/blogs'
-import Link from 'next/link'
-import { slugify } from '@/lib/utils'
+import type { CollectionEntry } from 'astro:content';
 
-function Blog() {
-  const blogs = getSortedPostsData().slice(0, 3)
+type Props = {
+  posts: CollectionEntry<'blog'>[];
+}
+
+function Blog({ posts }: Props) {
   return (
     <section>
-      {blogs.length !== 0 && (
+      {posts.length > 0 && (
         <>
           <h1 className="mb-8 text-xl font-heading sm:text-2xl">Blog Posts</h1>
           <article className="space-y-7">
-            {blogs.map((blog) => {
-              const slug = 'blog/' + slugify(blog.title)
+            {posts.map((blog) => {
+              const slug = '/blog/' + blog.slug;
               return (
                 <div className="space-y-2" key={slug}>
-                  <p className="text-sm">{blog.date}</p>
-                  <Link href={slug}>
+                  <p className="text-sm">{blog.data.date.toDateString()}</p>
+                  <a href={slug}>
                     <h2 className=" w-fit border-black text-xl hover:border-b-[3px] hover:border-dashed">
-                      {blog.title}
+                      {blog.data.title}
                     </h2>
-                  </Link>
+                  </a>
                 </div>
               )
             })}
@@ -31,4 +31,4 @@ function Blog() {
   )
 }
 
-export default Blog
+export default Blog;

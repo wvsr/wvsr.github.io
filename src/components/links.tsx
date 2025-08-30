@@ -1,5 +1,5 @@
 import {
-  IconType,
+  type IconType,
   SiGithub,
   SiGmail,
   SiLinkedin,
@@ -23,6 +23,11 @@ export default function Links() {
       href: 'https://linkedin.com/in/wasimul-vari-sami',
       name: 'Linkedin',
     },
+    {
+      icon: SiMedium,
+      href: '#', // Placeholder link
+      name: 'Medium',
+    }
   ]
 
   return (
