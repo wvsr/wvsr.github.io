@@ -1,0 +1,54 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import Pagination from '@/components/pagination.astro';
+import { formatRelativeDate } from '@/lib/utils';
+import type { Page } from 'astro';
+
+export async function getStaticPaths({ paginate }: { paginate: Function }) {
+  const posts = (await getCollection('blog')).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+
+  return paginate(posts, { pageSize: 20 });
+}
+
+const { page }: { page: Page<CollectionEntry<'blog'>> } = Astro.props;
+const posts = page.data;
+---
+
+<Layout title="Blog">
+  <div>
+    <h1 class="mb-8 text-2xl font-heading sm:text-4xl">Blog</h1>
+
+    <div class="flex flex-col gap-5">
+      {posts.map((blog: CollectionEntry<'blog'>) => (
+          <a
+            href={`/blog/${blog.slug}`}
+            class="block"
+          >
+            {blog.data.thumbnail && (
+              <img
+                src={blog.data.thumbnail}
+                alt={blog.data.title}
+                class="w-full mb-4"
+              />
+            )}
+            <div class="mt-5 font-base text-text dark:text-darkText">
+              <h2 class="text-xl font-heading sm:text-2xl">
+                {blog.data.title}
+              </h2>
+
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{formatRelativeDate(blog.data.date.toISOString())}</p>
+              <p class="mt-2 text-base">{blog.body.substring(0, 150) + '...'}</p>
+            </div>
+          </a>
+        )
+      )}
+    </div>
+
+    <div class="mt-8">
+        <Pagination currentPage={page.currentPage} numPages={page.lastPage} base="/blog" />
+    </div>
+  </div>
+</Layout>

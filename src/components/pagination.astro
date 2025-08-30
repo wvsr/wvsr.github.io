@@ -1,0 +1,40 @@
+---
+interface Props {
+  currentPage: number;
+  numPages: number;
+  base: string; // e.g. /blog
+}
+
+const { currentPage, numPages, base } = Astro.props;
+
+const isFirst = currentPage === 1;
+const isLast = currentPage === numPages;
+const prevPage = `${base}/page/${currentPage - 1}`;
+const nextPage = `${base}/page/${currentPage + 1}`;
+
+---
+
+{numPages > 1 && (
+  <div class="flex justify-center gap-5">
+    {!isFirst && (
+      <a href={prevPage} rel="prev">
+        ← Previous Page
+      </a>
+    )}
+    {Array.from({ length: numPages }, (_, i) => (
+      <a
+        href={`${base}/page/${i + 1}`}
+        class:list={[
+          { "font-bold": currentPage === i + 1 }
+        ]}
+      >
+        {i + 1}
+      </a>
+    ))}
+    {!isLast && (
+      <a href={nextPage} rel="next">
+        Next Page →
+      </a>
+    )}
+  </div>
+)}

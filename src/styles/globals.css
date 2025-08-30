@@ -9,5 +9,5 @@
 }
 
 body {
-  @apply dark:bg-darkBg bg-bg;
+  @apply bg-bg dark:bg-darkBg;
 }
