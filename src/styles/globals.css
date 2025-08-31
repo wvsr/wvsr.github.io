@@ -10,4 +10,5 @@
 
 body {
   @apply bg-bg dark:bg-darkBg;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }

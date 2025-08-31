@@ -16,7 +16,7 @@ function Blog({ posts }: Props) {
               const slug = '/blog/' + blog.slug
               return (
                 <div className="space-y-2" key={slug}>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
                     {formatRelativeDate(blog.data.date.toDateString())}
                   </p>
                   <a href={slug}>

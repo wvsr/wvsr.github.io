@@ -4,9 +4,19 @@ import { Moon, Sun } from 'lucide-react'
 import * as React from 'react'
 
 export function ThemeSwitcher() {
-  const [theme, setTheme] = React.useState(
-    typeof window !== 'undefined' ? localStorage.getItem('theme') : 'light'
-  );
+  const [theme, setTheme] = React.useState('light');
+
+  React.useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+      document.documentElement.classList.toggle('dark', storedTheme === 'dark');
+    } else {
+      // If no theme is stored, default to light and apply it
+      setTheme('light');
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -14,10 +24,6 @@ export function ThemeSwitcher() {
     localStorage.setItem('theme', newTheme);
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   }
-
-  React.useEffect(() => {
-    setTheme(localStorage.getItem('theme') || 'light');
-  }, []);
 
 
   return (
