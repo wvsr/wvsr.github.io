@@ -7,7 +7,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        sans: ['Merriweather', 'serif'],
+        mono: ['Roboto Mono', 'monospace'],
       },
       colors: {
         main: '#C4A1FF',
@@ -40,7 +41,7 @@ const config: Config = {
       },
       fontWeight: {
         base: '500',
-        heading: '700',
+        heading: '400',
       },
       screens: {
         w450: { raw: '(max-width: 450px)' },

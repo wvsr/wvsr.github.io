@@ -20,7 +20,10 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.5(astro@4.16.19(@types/node@20.19.11)(rollup@4.49.0)(typescript@5.9.2))(tailwindcss@3.4.17)
-      '@fontsource/plus-jakarta-sans':
+      '@fontsource/merriweather':
+        specifier: ^5.2.10
+        version: 5.2.10
+      '@fontsource/roboto-mono':
         specifier: ^5.2.6
         version: 5.2.6
       '@icons-pack/react-simple-icons':
@@ -442,8 +445,11 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@fontsource/plus-jakarta-sans@5.2.6':
-    resolution: {integrity: sha512-mvUiz1ta3bCVhP/DPmAOmuzhHQi6ddOo1GgaW58rpojr510Rx9BkqXqcnMhGEOMZZB3+84frvfFmw/jKCctHLw==}
+  '@fontsource/merriweather@5.2.10':
+    resolution: {integrity: sha512-jZFajhfv5K8BSz8SVXY450BPa3C/WBYXwCHehi9sdqSsfEo9k4GorNidPX2CViNTnBqg6kt+3+D/oricLD5uDg==}
+
+  '@fontsource/roboto-mono@5.2.6':
+    resolution: {integrity: sha512-fLCa3zs9XruKE8Fdbq0UWB0wqTi5dzi09QsnW7HgTwwnSVDZ3nH+X7Qg7l0yeIZs+E472cKE3RUD21ZnaXk4Zg==}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -3223,7 +3229,9 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@fontsource/plus-jakarta-sans@5.2.6': {}
+  '@fontsource/merriweather@5.2.10': {}
+
+  '@fontsource/roboto-mono@5.2.6': {}
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:

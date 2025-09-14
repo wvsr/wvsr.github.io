@@ -24,7 +24,7 @@ const { Content } = await post.render();
       />
     )}
     <h1>{post.data.title}</h1>
-    <div>{post.data.date.toDateString()}</div>
+    <div class="text-sm text-gray-500 dark:text-gray-400">{post.data.date.toDateString()}</div>
     <Content />
   </article>
 </Layout>
